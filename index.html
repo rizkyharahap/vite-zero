@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Zero</title>
+
+    <style>
+      @import url("./style.css");
+      @import url("./sample.sass");
+    </style>
+  </head>
+  <body>
+    <h1>Hello Vite</h1>
+    <h2>Support SASS</h2>
+
+    <script type="module" text="javascript">
+      import { sayHello } from "./say-hello.js";
+      import { sayGoodbye } from "./say-goodbye.ts";
+      import { v4 } from "uuid";
+      import * as person from "./person.json";
+      import textFile from "./hello.txt?raw";
+
+      console.info(person.default);
+      console.info(person.name);
+      console.info(person.web);
+      console.info(person.instagram);
+
+      console.info(textFile);
+
+      sayHello("Rizki");
+      sayGoodbye("Rizki");
+
+      console.info("Hello Vite");
+
+      console.info(v4());
+    </script>
+  </body>
+</html>
